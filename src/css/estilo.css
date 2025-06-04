@@ -120,3 +120,129 @@ button, .btn {
 button:hover, .btn:hover {
     background-color: #0055aa;
 }
+.tema {
+    text-align: center;
+    margin: 50px 0;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .menu-toggle {
+        display: inline;
+    }
+}
+
+body.tema-claro {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.tema-claro header,
+body.tema-claro footer {
+    background-color: #003366;
+    color: white;
+}
+
+body.tema-claro .card {
+    background-color: #007acc;
+    color: white;
+}
+
+body.tema-claro .card h2,
+body.tema-claro .card p {
+    color: white;
+}
+
+body.tema-escuro {
+    background-color: #1f1f1f;
+    color: #dcdcdc;
+}
+
+body.tema-escuro header,
+body.tema-escuro footer {
+    background-color: #121212;
+}
+
+body.tema-escuro .card {
+    background-color: #2a2a2a;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+body.tema-escuro h1,
+body.tema-escuro h2,
+body.tema-escuro nav a {
+    color: #00bfff;
+}
+
+body.tema-escuro .logo {
+    color: #00bfff;
+}
+
+body.tema-azul {
+    background-color: #003874;
+    color: #f0f0f0;
+}
+
+body.tema-azul header,
+body.tema-azul footer {
+    background-color: #005a99;
+    color: white;
+}
+
+body.tema-azul nav a {
+    color: white;
+}
+
+body.tema-azul nav a:hover {
+    color: #00bfff;
+}
+
+body.tema-azul .logo {
+    color: white;
+}
+
+body.tema-azul .card {
+    background-color: white;
+    color: #003366;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+body.tema-azul .card h2,
+body.tema-azul .card p {
+    color: #003366;
+}
+
+body.tema-azul h1,
+body.tema-azul h2 {
+    color: white;
+}
+
+.botoes-tema {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.botoes-tema .btn {
+    padding: 8px 14px;
+    font-size: 16px;
+    border-radius: 8px;
+}
