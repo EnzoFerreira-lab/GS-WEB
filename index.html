@@ -85,3 +85,33 @@
         <img src="imagens/comofunciona.jpg" alt="Funcionamento da plataforma">
     </div>
 </section>
+<section id="quiz">
+    <h2>Quiz Sobre Enchentes</h2>
+    <div id="quiz-container"></div>
+    <div id="quiz-result"></div>
+</section>
+
+<section id="formulario">
+    <div class="card">
+        <h2>Fale Conosco</h2>
+        <p>Envie suas dúvidas, sugestões ou fale com nossa equipe.</p>
+        <form onsubmit="return validarFormulario()">
+            <input type="text" id="nome" placeholder="Seu Nome">
+            <input type="email" id="email" placeholder="Seu Email">
+            <textarea id="mensagem" placeholder="Sua Mensagem"></textarea>
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Aqua Intel - Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    window.onload = loadQuiz;
+</script>
+
+</body>
+</html>
