@@ -3,16 +3,20 @@ function toggleMenu() {
     const menu = document.querySelector('.menu');
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
 }
+
 /* ================= SLIDESHOW ================= */
 const slides = ["imagens/slide1.png", "imagens/slide2.png", "imagens/slide3.png"];
 let slideIndex = 0;
 
 function showSlides() {
     const img = document.getElementById('slide');
-    slideIndex = (slideIndex + 1) % slides.length;
-    img.src = slides[slideIndex];
+    if (img) {
+        slideIndex = (slideIndex + 1) % slides.length;
+        img.src = slides[slideIndex];
+    }
 }
 setInterval(showSlides, 3000);
+
 /* ================= VALIDAÇÃO FORMULÁRIO ================= */
 function validarFormulario() {
     const nome = document.getElementById('nome').value.trim();
@@ -27,11 +31,13 @@ function validarFormulario() {
     alert("✅ Mensagem enviada com sucesso!");
     return true;
 }
+
 /* ================= TROCA DE TEMAS ================= */
 function mudarTema(tema) {
     document.body.classList.remove('tema-claro', 'tema-escuro', 'tema-azul');
-    document.body.classList.add(tema-${tema});
+    document.body.classList.add(tema-$,{tema});
 }
+
 /* ================= QUIZ ================= */
 const quizData = [
     { pergunta: "O que pode causar enchentes?", respostas: ["Chuvas fortes", "Sol", "Neve"], correta: 0 },
@@ -78,7 +84,7 @@ function submitQuiz() {
     let score = 0;
 
     quizData.forEach((item, index) => {
-        const resposta = document.querySelector(input[name="q${index}"]:checked);
+        const resposta = document.querySelector(input[name="q${index}"],checked);
         if (resposta && Number(resposta.value) === item.correta) {
             score++;
         }
@@ -88,6 +94,6 @@ function submitQuiz() {
     resultado.innerHTML = `
         <h2>Resultado do Quiz</h2>
         <p>🎯 Você acertou <strong>${score}</strong> de <strong>${quizData.length}</strong> perguntas.</p>
-        <p>${score >= 7 ? "✅ Excelente! Você entende bem sobre prevenção de enchentes." : "⚠ Atenção! Revise os conceitos sobre enchentes."}</p>
+        <p>${score >= 7 ? "✅ Excelente! Você entende bem sobre prevenção de enchentes." : "⚠️ Atenção! Revise os conceitos sobre enchentes."}</p>
     `;
 }
