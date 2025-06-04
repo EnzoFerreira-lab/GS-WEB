@@ -51,3 +51,72 @@ header {
     font-size: 28px;
     cursor: pointer;
 }
+section {
+    padding: 80px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 40px 20px;
+    margin: 40px 0;
+}
+
+.slideshow img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+input, textarea {
+    display: block;
+    margin: 12px auto;
+    padding: 14px;
+    width: 90%;
+    max-width: 450px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #003366;
+}
+
+textarea {
+    height: 120px;
+}
+
+button, .btn {
+    padding: 14px 28px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover, .btn:hover {
+    background-color: #0055aa;
+}
