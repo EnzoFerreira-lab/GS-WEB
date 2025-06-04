@@ -27,3 +27,8 @@ function validarFormulario() {
     alert("✅ Mensagem enviada com sucesso!");
     return true;
 }
+/* ================= TROCA DE TEMAS ================= */
+function mudarTema(tema) {
+    document.body.classList.remove('tema-claro', 'tema-escuro', 'tema-azul');
+    document.body.classList.add(tema-${tema});
+}
