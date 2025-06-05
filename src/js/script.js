@@ -5,7 +5,7 @@ function toggleMenu() {
 }
 
 /* ================= SLIDESHOW ================= */
-const slides = ["imagens/slide1.png", "imagens/slide2.png", "imagens/slide3.png"];
+const slides = ["src/imgs/slideshow1.jpg", "src/imgs/slideshow2.png", "src/imgs/slideshow3.png"];
 let slideIndex = 0;
 
 function showSlides() {
@@ -35,7 +35,7 @@ function validarFormulario() {
 /* ================= TROCA DE TEMAS ================= */
 function mudarTema(tema) {
     document.body.classList.remove('tema-claro', 'tema-escuro', 'tema-azul');
-    document.body.classList.add(tema-$,{tema});
+    document.body.classList.add(`tema-${tema}`);
 }
 
 /* ================= QUIZ ================= */
@@ -84,7 +84,7 @@ function submitQuiz() {
     let score = 0;
 
     quizData.forEach((item, index) => {
-        const resposta = document.querySelector(input[name="q${index}"],checked);
+        const resposta = document.querySelector(`input[name="q${index}"]:checked`);
         if (resposta && Number(resposta.value) === item.correta) {
             score++;
         }

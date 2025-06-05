@@ -26,6 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 .menu {
     list-style: none;
     display: flex;
@@ -51,6 +52,7 @@ header {
     font-size: 28px;
     cursor: pointer;
 }
+
 section {
     padding: 80px 20px;
     text-align: center;
@@ -79,11 +81,20 @@ p {
     margin: 40px 0;
 }
 
+/* ==================== SLIDESHOW ==================== */
+.slideshow {
+    margin-top: 30px;
+}
+
 .slideshow img {
     width: 100%;
     max-width: 700px;
+    height: auto;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
 }
 
 input, textarea {
@@ -120,6 +131,7 @@ button, .btn {
 button:hover, .btn:hover {
     background-color: #0055aa;
 }
+
 .tema {
     text-align: center;
     margin: 50px 0;
@@ -133,6 +145,7 @@ footer {
     margin-top: 60px;
 }
 
+/* ==================== RESPONSIVO ==================== */
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -150,6 +163,7 @@ footer {
     }
 }
 
+/* ==================== TEMAS ==================== */
 body.tema-claro {
     background-color: #ffffff;
     color: #333;
@@ -246,6 +260,8 @@ body.tema-azul h2 {
     font-size: 16px;
     border-radius: 8px;
 }
+
+/* ==================== QUIZ ==================== */
 #quiz-container div {
     background-color: #f9f9f9;
     padding: 20px;
@@ -321,4 +337,46 @@ body.tema-azul h2 {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: 20px auto;
+    object-fit: cover;
+}
+.slideshow {
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+    margin: 40px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.slides-wrapper {
+    display: flex;
+    width: calc(700px * 3); /* 700px vezes o número de imagens */
+    animation: slide 9s infinite;
+}
+
+.slides-wrapper img {
+    width: 700px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Animação */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(0); }
+
+    38% { transform: translateX(-700px); }
+    71% { transform: translateX(-700px); }
+
+    76% { transform: translateX(-1400px); }
+    100% { transform: translateX(-1400px); }
 }
